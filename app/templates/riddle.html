@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Solve the Riddle</h1>
+    <p>{{ riddle }}</p>
+    <form method="POST">
+        <input type="text" name="answer" placeholder="Your answer" required>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

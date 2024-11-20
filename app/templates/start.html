@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,23 @@
     <link rel="stylesheet" href="{{( url_for('static', filename='css/style.css'))}}">
 
 </head>
+
 <body>
-    <h1>Your Adventure Begins</h1>
-    <p>You stand at a crossroads. To your left is a haunted castle, and to your right is a dark forest.</p>
-    <a href="/castle" class="btn">Enter the Haunted Castle</a>
-    <a href="/forest" class="btn">Venture into the Dark Forest</a>    
+    <div>
+        <h1 >Your Adventure Begins</h1>
+        <p style="color: rgb(174, 170, 169);">You stand at a crossroads. To your left is a haunted castle, and to your right is a dark forest.</p>
+        <div class="path">
+           
+            <a href="/castle">
+                <img src="{{ url_for('static', filename='images/castle2.jpg') }}" alt="Castle">
+            </a>
+            <a href="/forest">
+                <img src="{{ url_for('static', filename='images/forest.jpg') }}" alt="Forest">
+            </a>
+        </div>
+
+    </div>
+
 </body>
+
 </html>

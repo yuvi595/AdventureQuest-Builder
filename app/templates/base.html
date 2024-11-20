@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>The Shattered Realm</h1>
+        <div class="stats">
+            <p><strong>Health:</strong> {{ stats['health'] }}</p>
+            <p><strong>Mana:</strong> {{ stats['mana'] }}</p>
+            <p><strong>Gold:</strong> {{ stats['gold'] }}</p>
+            <p><strong>Inventory:</strong> {{ stats['inventory'] }}</p>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

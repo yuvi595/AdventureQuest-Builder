@@ -1,15 +1,26 @@
-body{
-    background: #1b1b1b;
+body {
+    background: url('/static/images/inferno.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #e0e0e0;
     font-family: 'Georgia', serif;
     text-align: center;
     padding: 20px;
 }
 
-h1{
+h1 {
     font-size: 2.5em;
-    color: #ff6666;
+    color: #ee0606;
     text-shadow: 2px 2px #000;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 p{
@@ -31,6 +42,49 @@ p{
 
 .btn:hover{
     background: #666;
-    border-color: #ff6666;
-    color: #fff;
+    border-color: #76136c;
+    color: #0b0b0b;
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 1em;
+    }
+} 
+.path {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.path img {
+    width: 300px;
+    height: 600px;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.path img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.forest{
+    background: url('/static/images/forestb.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    padding: 20px;
 }

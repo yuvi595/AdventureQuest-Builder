@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
-    <link rel="stylesheet" href="{{( url_for('static', filename='css/style.css'))}}">
+    <link rel="stylesheet" href="{{( url_for('static', filename='css/castle.css'))}}">
 
 </head>
-<body>
+
+<body style="background: url('/static/images/castleb.jpg') no-repeat center center fixed;">
+    {% extends "base.html" %}
+
+    {% block content %}
     <h1>The Haunted Castle</h1>
     <p>As you enter, you hear whispers in the dark. The air is cold, and the floor creaks beneath your feet.</p>
-    <a href="/start" class="btn">Go back</a>    
+    <a href="/castle/riddle" class="btn"> Being Your Adventure</a>
+    <a href="/start" class="btn">Go Back</a>
+    {% endblock %}
+
 </body>
+
 </html>
